@@ -1,0 +1,14 @@
+1  sudo vi /etc/ansible/hosts
+   22  ansible all -m ping
+   23  cd ..
+   24  pwd
+   25  cat >hello.html
+   26  ls
+   27  ansible all -m copy "src=/home/ansadmin/hello.html dest=/home/ansadmin"
+   28  ansible all -m copy -a "src=/home/ansadmin/hello.html dest=/home/ansadmin"
+   29  ansible all -m copy -a "src=/home/ansadmin/hello.html dest=/home/ansadmin"
+   31  ansible all -m yum -a "name=httpd state=latest" -b
+   32  ansbile -s all service -a "name=httpd state=started"
+   33* ansbile  all -m service -a "name=httpd state=started"
+   34  ansible -s all -m service -a "name=httpd state=started" -b
+   35  ansible all -m service -a "name=httpd state=started" -b
